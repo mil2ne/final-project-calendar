@@ -11,15 +11,12 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @Entity
 @Table(name = "users")
-public class User {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+public class User extends BaseEntity {
+
     private String name;
     private String email;
     private String password;
     private LocalDate birthday;
-    private LocalDateTime createdAt = LocalDateTime.now();
 
     public User(String name, String email, String password, LocalDate birthday) {
         this.name = name;
