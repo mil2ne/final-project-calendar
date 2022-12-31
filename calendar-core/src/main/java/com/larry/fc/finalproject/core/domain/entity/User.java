@@ -1,6 +1,7 @@
 package com.larry.fc.finalproject.core.domain.entity;
 
 import com.larry.fc.finalproject.core.util.Encryptor;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
@@ -9,6 +10,7 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @Getter
+@Builder
 @NoArgsConstructor
 @Entity
 @Table(name = "users")
