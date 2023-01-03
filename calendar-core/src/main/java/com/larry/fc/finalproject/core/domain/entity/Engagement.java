@@ -2,12 +2,14 @@ package com.larry.fc.finalproject.core.domain.entity;
 
 import com.larry.fc.finalproject.core.domain.Event;
 import com.larry.fc.finalproject.core.domain.RequestStatus;
+import com.larry.fc.finalproject.core.util.Period;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @Getter
@@ -35,4 +37,8 @@ public class Engagement extends BaseEntity{
     }
 
 
+
+    public boolean isOverlapped(Period period) {
+        return this.schedule.isOverlapped(period);
+    }
 }
